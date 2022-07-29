@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LifeCycleExample</string>
+    <string name="Welcome">This is the example for android life cycle</string>
+</resources>
