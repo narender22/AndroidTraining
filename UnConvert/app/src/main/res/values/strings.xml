@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UnConvert</string>
+    <string name="kg_weight">KG weight</string>
+    <string name="Submit">Submit</string>
+    <string name="in_weight">Enter weight in KG to convert</string>
+
 </resources>
