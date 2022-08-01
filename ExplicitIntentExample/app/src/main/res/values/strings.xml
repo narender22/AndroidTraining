@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExplicitIntentExample</string>
+    <string name="enter_Number">Enter number</string>
+    <string name="send_Index">send index</string>
+</resources>
