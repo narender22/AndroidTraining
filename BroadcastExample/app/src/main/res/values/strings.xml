@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BroadcastExample</string>
+    <string name="title">Example of Broadcast</string>
+    <string name="broadcast">Broadcast</string>
+</resources>

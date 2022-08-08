@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpinnerExample</string>
+    <string name="submit">Submit</string>
+    <string name="text_View">Select your country :</string>
+</resources>
