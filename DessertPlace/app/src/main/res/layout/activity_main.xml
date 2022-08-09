@@ -62,16 +62,17 @@
         android:id="@+id/personName"
         android:layout_width="267dp"
         android:layout_height="52dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/name_here"
         android:inputType="textPersonName"
-        android:text="@string/name_here"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.539"
-        android:autofillHints=""
+        app:layout_constraintVertical_bias="0.428"
         tools:ignore="LabelFor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

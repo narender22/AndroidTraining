@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "main activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     * broadcast a custom intent
     * */
     public void broadcastIntent(View view){
+        Log.d(TAG, "broadcastIntent: Button clicked");
 //        create a new intent
         Intent intent=new Intent();
 
@@ -26,5 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        sent broadcast when button button is clicked
         sendBroadcast(intent);
+        Log.d(TAG, "broadcastIntent: broadcast sent");
     }
 }

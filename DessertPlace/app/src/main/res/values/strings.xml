@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">DessertPlace</string>
+    <string name="delivery">Choose Delivery method</string>
+    <string name="address">Address</string>
+    <string name="same_day">Same day messenger service</string>
+    <string name="next_day">Next day ground delivery</string>
+    <string name="pick_up">Pick up</string>
+    <string name="mobile">Contact</string>
+    <string name="note">Note</string>
     <string name="todo">TODO</string>
     <string name="submit">Submit</string>
     <string name="name_here">Enter here</string>
