@@ -39,7 +39,7 @@
         android:autofillHints="@string/address"
         android:ems="10"
         android:hint="@string/address"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
