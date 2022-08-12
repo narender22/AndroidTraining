@@ -27,33 +27,44 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
+
     /*
-    * To add menu is MainActivity
-    * */
+     * To add menu is MainActivity
+     * */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dessertmenu, menu);
         return true;
     }
+
     /*
-    * define menu click/select
-    * */
+     * define menu click/select
+     * */
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         /*
-        * item is the menu item that is clicked/selected
-        * */
-        switch (item.getItemId()){
-//            when addIcon button is clicked
-            case R.id.addIcon:
-                Toast.makeText(this, "Add button clicked", Toast.LENGTH_SHORT).show();
+         * item is the menu item that is clicked/selected
+         * */
+        switch (item.getItemId()) {
+//            when shop icon is selected
+            case R.id.shop:
+                Toast.makeText(this, "Shop menu selected", Toast.LENGTH_SHORT).show();
                 return true;
-//                when setting from menu is selected
-            case R.id.setting:
-                Toast.makeText(this, "Setting menu clicked", Toast.LENGTH_SHORT).show();
+//          when info icon  is selected
+            case R.id.info:
+                Toast.makeText(this, "Info menu selected", Toast.LENGTH_SHORT).show();
+                return true;
+//            when favorites menu is selected
+            case R.id.favorites:
+                Toast.makeText(this, "Favorites menu selected", Toast.LENGTH_SHORT).show();
+                return true;
+//            when contact menu is selected
+            case R.id.contact:
+                Toast.makeText(this, "Contact menu selected", Toast.LENGTH_SHORT).show();
                 return true;
 //                if nothing is selected from menu
             default:

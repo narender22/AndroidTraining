@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">DessertPlace</string>
+    <string name="cake">CAKE</string>
+    <string name="donuts">DONUTS</string>
+    <string name="ice_cream">ICE CREAM</string>
     <string name="delivery">Choose Delivery method</string>
     <string name="address">Address</string>
     <string name="same_day">Same day messenger service</string>
@@ -15,5 +18,13 @@
     <string name="name">Enter your name</string>
     <string name="welcome">Welcome to the Dessert place</string>
     <string name="item">Item</string>
-    <string name="setting">setting</string>
+    <string name="favorites">Favorites</string>
+    <string name="info">info</string>
+    <string name="shop">shop</string>
+    <string name="contact">contact</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity">Second Activity</string>
+    <string name="date">JAN 01 2020</string>
 </resources>
