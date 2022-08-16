@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">DessertPlace</string>
+    <string name="account">My Account</string>
+    <string name="setting">Settings</string>
+    <string name="log_out">Log out</string>
     <string name="cake">CAKE</string>
     <string name="donuts">DONUTS</string>
     <string name="ice_cream">ICE CREAM</string>
@@ -27,4 +30,11 @@
     <string name="delete">Delete</string>
     <string name="title_activity">Second Activity</string>
     <string name="date">JAN 01 2020</string>
+
+    <!--
+    To toggle the open/close button
+    of the navigation drawer
+    -->
+    <string name="nav_open">open</string>
+    <string name="nav_close">close</string>
 </resources>

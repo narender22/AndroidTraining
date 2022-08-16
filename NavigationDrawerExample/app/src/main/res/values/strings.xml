@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NavigationDrawerExample</string>
+    <string name="header_image">Header Image</string>
+    <string name="home">Home</string>
+    <string name="call">Call</string>
+    <string name="setting">Setting</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
