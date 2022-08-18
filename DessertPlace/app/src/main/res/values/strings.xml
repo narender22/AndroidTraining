@@ -28,6 +28,9 @@
     <string name="edit">Edit</string>
     <string name="share">Share</string>
     <string name="delete">Delete</string>
+    <string name="header_image">Header Image</string>
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="the_dessert_place">THE DESSERT PLACE</string>
     <string name="title_activity">Second Activity</string>
     <string name="date">JAN 01 2020</string>
 

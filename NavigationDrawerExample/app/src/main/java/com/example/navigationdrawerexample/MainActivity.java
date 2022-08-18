@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
 //                when call button is clicked
                 case R.id.call:
-                    Toast.makeText(MainActivity.this, "Home button clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "call button clicked", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
 //                on setting button click
                 case R.id.setting:
-                    Toast.makeText(MainActivity.this, "Home button clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "setting button clicked", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 default:
                     drawerLayout.closeDrawer(GravityCompat.START);
