@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hello"
+        android:textColor="#A41ECA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="130dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="170dp"
+        android:text="@string/welcome"
+        android:textColor="#A41ECA"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        android:layout_marginStart="30dp" />
+
+    <EditText
+        android:id="@+id/personName"
+        android:layout_width="267dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="@string/name_here"
+        android:inputType="textPersonName"
+        android:textColorHint="#757575"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:text="@string/submit"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="500dp"
+        tools:ignore="UsingOnClickInXml" />
+
+</FrameLayout>

@@ -1,8 +1,5 @@
 package com.example.dessertplace;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
@@ -10,17 +7,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Objects;
-
-import android.widget.DatePicker;
 
 /*
  * ThirdActivity
@@ -44,7 +42,7 @@ public class ThirdActivity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_third);
 
 //        setting the back button in the menu bar
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+//        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 //
         dateButton = findViewById(R.id.datePicker);
         final Calendar c = Calendar.getInstance();

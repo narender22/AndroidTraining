@@ -1,8 +1,5 @@
 package com.example.dessertplace;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Objects;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /*
  * Second Activity
@@ -38,7 +36,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
 //        setting the back button in the menu bar
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+//        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 //        creating instance of images
         ImageView image1 = findViewById(R.id.cakeImage);
@@ -70,7 +68,8 @@ public class SecondActivity extends AppCompatActivity {
         }
         floatingActionButton = findViewById(R.id.floatingActionButton);
 //        Floating action button - on click listener
-        floatingActionButton.setOnClickListener(view -> Toast.makeText(SecondActivity.this, "Floating action button clicked", Toast.LENGTH_SHORT).show());
+        floatingActionButton.setOnClickListener(view ->
+                Toast.makeText(SecondActivity.this, "Floating action button clicked", Toast.LENGTH_SHORT).show());
     }
 
     /*
