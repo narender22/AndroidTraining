@@ -25,28 +25,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
+//    on button click
     public void btnGetContact(View view) {
         getPhoneContacts();
     }
 
     private void getPhoneContacts(){
+//        first check if the user has provided permission
+//        if not ask again
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_CONTACTS}, 0);
         }
 
         ContentResolver contentResolver = getContentResolver();
+//        get URI for phone contacts
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
+//        set a cursor for contacts
         Cursor cursor = contentResolver.query(uri, null, null, null, null);
+//        print number of contacts
         Log.d(TAG, "Total # of contacts ::: "+ cursor.getCount());
-        if (cursor.getCount() > 0){
-            while (cursor.moveToNext()){
-                @SuppressLint("Range") String contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-                @SuppressLint("Range") String contactNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
+//        check if number of contact is more than 0
+        if (cursor.getCount() > 0){
+//            If there are contacts print them till end
+            while (cursor.moveToNext()){
+//                get contact name
+                @SuppressLint("Range") String contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+//                get contact number
+                @SuppressLint("Range") String contactNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+//                print contact name and number
                 Log.d(TAG, "Contact Name     :::   "+ contactName + "    Ph     :::    "+ contactNumber);
             }
         }
+//        close the cursor when done
         cursor.close();
     }
 }
