@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void logoutNotify() {
-        //        get a drawable
+//        get a drawable
         Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.android_logo, null);
 //        convert drawable to bitmap drawable
         BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
