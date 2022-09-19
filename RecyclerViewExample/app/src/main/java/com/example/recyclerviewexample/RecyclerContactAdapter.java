@@ -1,6 +1,5 @@
 package com.example.recyclerviewexample;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -99,24 +98,24 @@ public class RecyclerContactAdapter extends RecyclerView.Adapter<RecyclerContact
 //                dismiss the dialog at end
                 dialog.dismiss();
             }));
-//            show dialog
+//            show dialog;
             dialog.show();
         });
 
-        holder.llrow.setOnLongClickListener(view -> {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(context).setTitle("Delete contact")
-                    .setMessage("Are you sure you want to delete this Contact")
-                    .setIcon(R.drawable.ic_baseline_delete_24)
-                    .setPositiveButton("Yes", (dialogInterface, i) -> {
-                        arrayContact.remove(position);
-                        notifyItemRemoved(position);
-                    }).setNegativeButton("No", (dialogInterface, i) -> {
-                    });
-            builder.show();
-
-            return true;
-        });
+//        holder.llrow.setOnLongClickListener(view -> {
+//
+//            AlertDialog.Builder builder = new AlertDialog.Builder(context).setTitle("Delete contact")
+//                    .setMessage("Are you sure you want to delete this Contact")
+//                    .setIcon(R.drawable.ic_baseline_delete_24)
+//                    .setPositiveButton("Yes", (dialogInterface, i) -> {
+//                        arrayContact.remove(position);
+//                        notifyItemRemoved(position);
+//                    }).setNegativeButton("No", (dialogInterface, i) -> {
+//                    });
+//            builder.show();
+//
+//            return true;
+//        });
     }
 
     /*

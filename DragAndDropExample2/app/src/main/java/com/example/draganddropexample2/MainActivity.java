@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     private TextView textView;
     private Button button;
     private ImageView imageView;
-    private static final String IMAGE_VIEW_TAG = "LAUNCHER LOGO";
+    private static final String IMAGE_VIEW_TAG = "ANDROID LOGO";
     private static final String TEXT_VIEW_TAG = "DRAG TEXT";
     private static final String BUTTON_VIEW_TAG = "DRAG BUTTON";
 
@@ -81,15 +81,15 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             view.startDragAndDrop(data  //data to be dragged
                     , shadowBuilder     //drag shadow
-                    , view              //local data about teh drag and drop
-                    , 0             //no needed flags
+                    , view              //local data about the drag and drop
+                    , 0            //no needed flags
             );
         }
         else{
-            view.startDrag(data  //data to be dragged
+            view.startDrag(data         //data to be dragged
                     , shadowBuilder     //drag shadow
                     , view              //local data about teh drag and drop
-                    , 0             //no needed flags
+                    , 0            //no needed flags
             );
         }
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 //        Handles each of the expected events
         switch (action){
             case DragEvent.ACTION_DRAG_STARTED:
-//                determined if this view can accept the dragged data
+                // determined if this view can accept the dragged data
                 // if you want to apply color when drag started to your view you can uncomment below lines
                 // to give any color tint to the View to indicate that it can accept
                 // data.
@@ -123,12 +123,14 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 //                return true; the return value is ignored
                 view.getBackground().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-//                Invalidate teh view to force a redraw in the new tint
+//                Invalidate the view to force a redraw in the new tint
                 view.invalidate();
                 return true;
+
             case DragEvent.ACTION_DRAG_LOCATION:
 //                ignore the event
                 return true;
+
             case DragEvent.ACTION_DRAG_EXITED:
 //                resets the color ting to blue, if you had set the BLUE color or any color in ACTION_DRAG_STARTED. Return true; the return value is ignored
 
@@ -156,10 +158,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
                 View v = (View) dragEvent.getLocalState();
                 ViewGroup owner = (ViewGroup) v.getParent();
-                owner.removeView(v); //remove the dragged view.
-                LinearLayout container = (LinearLayout) view; //caste teh view into LL as our drag acceptable layout is LL
-                container.addView(v); //Add teh dragged view
-                v.setVisibility(View.VISIBLE); //finally set visibility to VISIBLE
+                owner.removeView(v);                            //remove the dragged view.
+                LinearLayout container = (LinearLayout) view;   //caste teh view into LL as our drag acceptable layout is LL
+                container.addView(v);                           //Add the dragged view
+                v.setVisibility(View.VISIBLE);                  //finally set visibility to VISIBLE
 
 //                returns true. DragEvent.getResult() will return true.
                 return true;

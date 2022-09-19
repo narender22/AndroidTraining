@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="expense">Expense</string>
+    <string name="friends">Friends</string>
+    <string name="groups">Groups</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_income">Add Income</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="friends_fragment">Friends Fragment</string>
+    <string name="group_fragment">Group Fragment</string>
+    <string name="amount">Amount</string>
+    <string name="hash">#</string>
+    <string name="remark">Remark</string>
+    <string name="save">SAVE</string>
+    <string name="close">CLOSE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="tick_image">Tick Image</string>
+    <string name="food">Food</string>
+    <string name="_1773">1773</string>
+    <string name="total_income">Total Income</string>
+    <string name="total_expense">Total Expense</string>
+</resources>

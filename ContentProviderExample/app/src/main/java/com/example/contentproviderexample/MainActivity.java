@@ -40,8 +40,13 @@ public class MainActivity extends AppCompatActivity {
         ContentResolver contentResolver = getContentResolver();
 //        get URI for phone contacts
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
-//        set a cursor for contacts
-        Cursor cursor = contentResolver.query(uri, null, null, null, null);
+//        set a cursorLoader for contacts
+        Cursor cursor = contentResolver.query(uri   // The content URI of the words table
+                , null  //The columns to return for each row
+                , null  //selection criteria
+                , null  //Selection Criteria
+                , null  //The sort order for the returned rows
+        );
 //        print number of contacts
         Log.d(TAG, "Total # of contacts ::: "+ cursor.getCount());
 
