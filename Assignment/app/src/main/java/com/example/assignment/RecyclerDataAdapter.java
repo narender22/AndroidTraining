@@ -1,6 +1,7 @@
 package com.example.assignment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,11 +34,13 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imgTick.setImageResource(arrayData.get(position).img);
-        holder.amountF.setText(arrayData.get(position).amount);
+        holder.amountF.setText(String.valueOf(arrayData.get(position).amount));
         holder.category.setText(arrayData.get(position).category);
 
         holder.llrow.setOnClickListener(view -> {
-
+            Intent intent = new Intent(context, CategoryInformation.class);
+            intent.putExtra("category", arrayData.get(position).category);
+            context.startActivity(intent);
         });
     }
 

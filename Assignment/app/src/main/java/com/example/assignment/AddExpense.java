@@ -15,6 +15,7 @@ import java.util.Calendar;
 
 public class AddExpense extends AppCompatActivity {
     Button datePicker;
+    MyDbHelper dbHelper = new MyDbHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +44,10 @@ public class AddExpense extends AppCompatActivity {
 
         submit.setOnClickListener(view -> {
             String amountS = amount.getText().toString();
-            String date = datePicker.getText().toString();
             String remarkS = remarks.getText().toString();
             String categorySelected = spinner.getSelectedItem().toString();
             Intent intent = new Intent(AddExpense.this, MainActivity.class);
-            intent.putExtra("ExpenseAmount", amountS);
-            intent.putExtra("ExpenseDate", date);
-            intent.putExtra("ExpenseCategory", categorySelected);
-            intent.putExtra("ExpenseRemarks", remarkS);
+            dbHelper.addData(categorySelected, amountS, remarkS);
             startActivity(intent);
         });
 

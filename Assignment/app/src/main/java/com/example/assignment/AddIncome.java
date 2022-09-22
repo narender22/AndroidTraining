@@ -12,6 +12,7 @@ import java.util.Calendar;
 
 public class AddIncome extends AppCompatActivity {
     Button datePicker;
+    MyDbHelper dbHelper = new MyDbHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +29,9 @@ public class AddIncome extends AppCompatActivity {
 
         okButton.setOnClickListener(view -> {
             String amountS = amount.getText().toString();
-            String dateS = datePicker.getText().toString();
             String remarkS = remarks.getText().toString();
             Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("IncomeAmount", amountS);
-            intent.putExtra("IncomeDate", dateS);
-            intent.putExtra("IncomeRemarks", remarkS);
+            dbHelper.addData("Income", amountS, remarkS);
             startActivity(intent);
         });
 

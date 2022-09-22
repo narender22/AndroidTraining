@@ -1,6 +1,8 @@
 package com.example.assignment.fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,13 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.assignment.AddExpense;
 import com.example.assignment.AddIncome;
 import com.example.assignment.DataModel;
+import com.example.assignment.LoginActivity;
+import com.example.assignment.MyDbHelper;
 import com.example.assignment.R;
 import com.example.assignment.RecyclerDataAdapter;
 
 import java.util.ArrayList;
 
 public class ExpensesFragment extends Fragment {
-
 
     public ExpensesFragment() {
         // Required empty public constructor
@@ -30,6 +33,7 @@ public class ExpensesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        MyDbHelper dbHelper = new MyDbHelper(getActivity());
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_expenses, container, false);
 //        create instance for views used
@@ -37,86 +41,57 @@ public class ExpensesFragment extends Fragment {
         Button expenseButton = view.findViewById(R.id.addExpense);
         TextView income = view.findViewById(R.id.income);
         TextView expense = view.findViewById(R.id.expense);
-//        create variables for categories
-        int foodAmount=8621, investmentAmount=5995, familyAmount=895;
-        int dailyAmount=594, debtAmount=99, budgetAmount=4204;
-        int totalIncome = 20000;
-        int totalExpense;
-        int i;
+        Button logout = view.findViewById(R.id.logout);
+
 
 //        recycler view
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
 //        set linear layout
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-//        arraylist to store data about
+//        arraylist to store data about categories
         ArrayList<DataModel> arrayData = new ArrayList<>();
         RecyclerDataAdapter adapter;
+//        to show the total income
+        income.setText(String.valueOf(dbHelper.getCategoryTotal("Income")));
+//        show total expense
+        expense.setText(String.valueOf(dbHelper.getTotal()));
 
-        try{
-            Bundle bundle = requireActivity().getIntent().getExtras();
-            if (bundle.getString("ExpenseCategory") != null) {
-                switch (bundle.getString("ExpenseCategory")) {
-                    case "Food":
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        foodAmount = foodAmount + i;
-                        break;
-                    case "Investment":
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        investmentAmount = investmentAmount + i;
-                        break;
-                    case "Family":
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        familyAmount = familyAmount + i;
-                        break;
-                    case "Daily Necessities":
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        dailyAmount = dailyAmount + i;
-                        break;
-                    case "Debt & Loan":
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        debtAmount = debtAmount + i;
-                        break;
-                    default:
-                        i = Integer.parseInt(bundle.getString("ExpenseAmount"));
-                        budgetAmount = budgetAmount + i;
-                        break;
-                }
-            } else {
-                i = Integer.parseInt(bundle.getString("IncomeAmount"));
-                totalIncome = totalIncome + i;
-            }
-        }
-        catch (NullPointerException e){
-            System.out.println("Catch block executed");
-        }
+//        pass data to show in RecyclerView
+        arrayData.add(new DataModel(R.drawable.ic_check_box_blue, "Food", dbHelper.getCategoryTotal("Food")));
+        arrayData.add(new DataModel(R.drawable.ic_check_box_bluedark, "Investment", dbHelper.getCategoryTotal("Investment")));
+        arrayData.add(new DataModel(R.drawable.ic_check_box_green, "Family", dbHelper.getCategoryTotal("Family")));
+        arrayData.add(new DataModel(R.drawable.ic_check_box_purple, "Daily Necessities", dbHelper.getCategoryTotal("Daily Necessities")));
+        arrayData.add(new DataModel(R.drawable.ic_check_box_raddish, "Debt & Loan", dbHelper.getCategoryTotal("Debt & Loan")));
+        arrayData.add(new DataModel(R.drawable.ic_check_box_red, "Budget Balance", dbHelper.getCategoryTotal("Budget Balance")));
 
-        totalExpense = foodAmount + investmentAmount + familyAmount + dailyAmount + debtAmount + budgetAmount;
 
-        income.setText(String.valueOf(totalIncome));
-        expense.setText(String.valueOf(totalExpense));
-
-        arrayData.add(new DataModel(R.drawable.ic_check_box_blue, "Food", String.valueOf(foodAmount)));
-        arrayData.add(new DataModel(R.drawable.ic_check_box_bluedark, "Investment", String.valueOf(investmentAmount)));
-        arrayData.add(new DataModel(R.drawable.ic_check_box_green, "Family", String.valueOf(familyAmount)));
-        arrayData.add(new DataModel(R.drawable.ic_check_box_purple, "Daily Necessities", String.valueOf(dailyAmount)));
-        arrayData.add(new DataModel(R.drawable.ic_check_box_raddish, "Debt & Loan", String.valueOf(debtAmount)));
-        arrayData.add(new DataModel(R.drawable.ic_check_box_red, "Budget Balance", String.valueOf(budgetAmount)));
-
+//        assign activity and dataset for the adapter
         adapter = new RecyclerDataAdapter(getActivity(), arrayData);
+//        set adapter for the recyclerView
         recyclerView.setAdapter(adapter);
 
-//      Bundle to get data
-
-
+//        Add income button is clicked
         incomeButton.setOnClickListener(view1 -> {
             Intent intent = new Intent(getActivity(), AddIncome.class);
             startActivity(intent);
         });
 
+//        add expense button is clicked
         expenseButton.setOnClickListener(view1 -> {
 //      define an intent
             Intent intent = new Intent(getActivity(), AddExpense.class);
+            startActivity(intent);
+        });
+
+        logout.setOnClickListener(view1 -> {
+            SharedPreferences pref = requireActivity().getSharedPreferences("login", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+
+            editor.putBoolean("flag", true);
+            editor.apply();
+
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
         });
 

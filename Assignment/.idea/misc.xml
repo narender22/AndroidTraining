@@ -6,13 +6,23 @@
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.2885" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_add_expense.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_add_income.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_category_information.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_data_row.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_income.xml" value="0.22239583333333332" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_login.xml" value="0.14739583333333334" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_user_check.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/app_bar.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/content_main.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_contact_row.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_data_details_card.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_date_picker.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_expenses.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_friends.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_groups.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/header_layout.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/layout/nav_drawer.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/naku274274/AndroidStudioProjects/Assignment/app/src/main/res/menu/navigation_menu.xml" value="0.23541666666666666" />
       </map>
     </option>
   </component>
